@@ -2,7 +2,7 @@
 
 Create user from list of usernames and pubkey pair. This script must be run as root.  
 
-### Runnign examples  
+### Running examples  
 ```bash
 su -
 bash genuser.sh example1 example2 example3
@@ -10,6 +10,7 @@ bash genuser.sh example1 example2 example3
 
 ### Cleaning examples  
 ```bash
+su -
 bash genuser.sh example4
 ```
 

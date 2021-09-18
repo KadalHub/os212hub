@@ -1,0 +1,141 @@
+/** This is a report of recapped answers from Forumify Bot, OS211
+/** ZCZC DATE >>>QUESTION[COMMENT]
+ZCZC 2021.09.11 >>>Halo ka asdos dan semuanya, ini akhirnya saya berhasil di bash aliases, tapi output zczcnya tidak memiliki angka di belakangnya. Apa itu tidak apa apa?
+ZCZC 2021.09.11 >>>Halo kak, izin bertanya. Saya memiliki local commit (belum di-push) yang ingin saya hapus/edit dengan git commit --amend atau git reset --soft. Apakah hal tersebut diperbolehkan? Saya ngeri jika melakukan hal tersebut akan ikut merusak repo saya yang di-clone oleh Pak Rahmat(edited)
+ZCZC 2021.09.11 >>>kak yang remove the old key itu cara ngejalaninnya gimanaa? sama buat apa kakk kalo boleh dijelasin hehe
+ZCZC 2021.09.11 >>>ada yang tau step2 buat decrypt tarball weekly score yg dari https://os.vlsm.org/Log/ gimana ya?
+ZCZC 2021.09.11 >>>waktu git push muncul seperti ini tetapi tetap berhasil. harus bagaimana ya kak?
+ZCZC 2021.09.11 >>>halo kak, izin bertanya,  git config --global user.name         'Cicak Bin Kadal' ini masukinnya nama asli atau username git ya?
+ZCZC 2021.09.11 >>>permisi kak saya mencoba git push lewat SSH namun muncul seperti ini. saya sudah mencoba memasukan username dan pass github tapi selalu gagal
+ZCZC 2021.09.11 >>>siang kak asdos dan teman2, saya dapat syntax error di line 1 saat saya ingin buat bash aliases, saya copas hampir sama persis cuma ganti username jadi akun github saya, cara benerinnya gimana ya? terima kasih 
+ZCZC 2021.09.11 >>>3 izin bertanya ini itu fungsinya buat apa ya?
+ZCZC 2021.09.11 >>>Kak, kalau begini tuh kenapa ya? Saya mau import Guest-01b tapi ga bisa juga. Sudah uninstall-reinstall VirtualBox tapi ga bisa juga. Solusi di internet beberapa juga ga bisa. Guest-01b.ova saya ukurannya 790MB (estimasi di vlsm cuma 614), itu pengaruh ga sih?
+ZCZC 2021.09.11 >>>ini muncul setelah setting bash profile dan aliases. Ini normal kah ? atau ada yang salah? dan zczc itu apa ya? xxxxxx yang muncul memang seharusnya seperti itu?
+ZCZC 2021.09.11 >>>passphrasenya diisi apa ya?
+ZCZC 2021.09.11 >>>tentang github page, saya baru membuat index.md dan saya mencoba mengisinya dengan konten dummy. Tapi, kenapa ya saat saya buka git hub page, yang muncul cuma isi dari README.md?
+ZCZC 2021.09.11 >>>untuk email perlu ditambahin angka gitu atau langsung email github saja? username itu display name github kah?
+ZCZC 2021.09.11 >>>ini command shutdownnya tidak bisa ya?
+ZCZC 2021.09.11 >>>Halo asdos, izin bertanya. Mahasiswa wajib ikut server discord ya sebelum 13 septermber? Lalu, kalau menanyakan asdos di luar discord akan kena ban, apakah bertanya ke asdos lewat chat lain seperti scele, email, dan Line juga kena ban?
+ZCZC 2021.09.11 >>>Saya izin bertanya lagi. Nanti, pengumpulan LFS itu seperti apa ya? Apakah akan di kumpulkan OVA? kalau tidak mengumpulkan ova, berarti saya boleh install LFS lewat aplikasi VM lain seperti QEMU.
+ZCZC 2021.09.11 >>>Selamat malam kak, izin tanya. Username dan hostname di vm nya kan harus sama dengan username github ya kak, sementara username github saya awalnya huruf kapital dan itu gabisa untuk username. Menurut kk mendingan saya buat username baru dengan force badname atau rename username saya yang sekarang? cara rename username gimana ya kak?
+ZCZC 2021.09.11 >>>Selamat malam kak, mau mastiin aja hehe. Kalo Assignment #01 itu buat tugas 1 - 9 di minggu 1 (minggu ini) atau Assignment #01 itu untuk tugas pertama di setiap minggunya? Terima kasih
+ZCZC 2021.09.11 >>>Malam kak, mau nanya kak pas mau git push kok tidak bisa ya kak? Padahal SSH key nya sama kak.
+ZCZC 2021.09.12 >>>kak saya mencoba untuk mencoba awk dan mencari pattern, tetapi saya terus menerus mendapatkan error runaway regular expression atau hasil yang diharapkan tidak keluar sama sekali, kira-kira kenapa bisa begin?
+ZCZC 2021.09.12 >>>kak ini kenapa setiap saya jalanin command pasti ada zczc 613cec9a cb15bdc4 nya ya di paling bawah? tapi di root ga ada
+ZCZC 2021.09.12 >>>pagi, maaf izin memastikan, penggunaan template di bagian ini tidak wajib yaa? terima kasih
+ZCZC 2021.09.12 >>>halo ka, ini udah aku coba perbaiki links.mdnya, tapi tetap ga bisa, kira-kira apa ya solusinya?
+ZCZC 2021.09.12 >>>Siang kak, mau nanya kak pas mau git push kok tidak bisa ya kak?
+ZCZC 2021.09.12 >>>siang semua, izin bertanya tentang log, L11 Assignment #01 tuh maksudnya seluruh assignment di week 01 ya? makasih
+ZCZC 2021.09.12 >>>Kak kalo saya gak sengaja di tahap clone os212 blum sempat mengganti cbkadal menjadi uname github saya sendiri kira2 bagaimana cara memperbaikinya ya?
+ZCZC 2021.09.12 >>>permisi, bagaimana jika permission denied saat mau get update
+ZCZC 2021.09.12 >>>kak kalau connection timed out itu kalau config udah bener, kenapa ya? kalau misalkan karena ISP jelek dan gaada ISP lain itu bagaimana ya?
+ZCZC 2021.09.12 >>>Izin bertanya, kalau terlanjur set jadi /lfs adakah cara singkat mount ke /mnt/lfs ?
+ZCZC 2021.09.12 >>>kak ingin bertanya saya pas mengikuti tata cara website kok error begini yaa
+ZCZC 2021.09.12 >>>Apakah git rebase akan membuat github saya di os bermasalah? Saya tadi habis merge conflict gara gara lalai tidak git pull terlebih dahulu Tapi saya tidak rebase dari repo teman/external, Kak Saya mengikuti tulisan yang ada di layar saya ketika mau push Saya cek di github tidak menambah commit tapi filenya berhasil berubah, Kak :(
+ZCZC 2021.09.12 >>>Apakah saya boleh membuat github page memakai html&css?
+ZCZC 2021.09.12 >>>Halo kak izin tanya, waktu itu kalo ga salah kata Pak Rahmat log yang kotor itu log yang punya carriage return, yang biasanya berasal dari text editor windows. Nah cara ngecek file.txt nya punya carriage return gimana ya? Selama ini saya edit-commit langsung di github, baru sekarang mau push dari debian.
+ZCZC 2021.09.12 >>>izin bertanya, ini kenapa gede bgt ya kak, tadi saya add packages dua kali itu ngaruh tidak ya kak? apakah tidak apa apa kalau sizenya besar jauh dari estimasi yang ada di os4diss. TIA
+ZCZC 2021.09.12 >>>mau nanya don, kira2 ini knp ya?
+ZCZC 2021.09.12 >>>Kak, saya izin bertanya. Di slide hanya ada assignment 1 sampai 9, tetapi kata Pak RMS setiap minggu ada 11 assignment. Kalau boleh tahu 2 nya lagi itu apa ya Kak? Terima kasih Kak
+ZCZC 2021.09.12 >>>Kak saya sudah baca pertanyaan2 sebelumnya dan katanya git rebase ga safe. Nah tadi saya ga sengaja git rebase, tapi setelah rebase belom saya push lagi. Saya delete repo nya di lokal dan saya clone ulang. Kira-kira kalo kaya gitu aman ga ya?
+ZCZC 2021.09.12 >>>Untuk top list itu apakah ada minimal?
+ZCZC 2021.09.12 >>>kak saya mau bertanya, cara mengubah homepage di template github page itu gimana ya? terutama untuk site.author, site.baseurl, dkk. sudah saya ubah file 000.md tapi tidak ada perubahan
+ZCZC 2021.09.12 >>>Malam kak izin tanya, ghp saya source nya itu bukan di branch master, apakah diperbolehkan untuk mengganti source nya ke branch master dan buat index.md ulang di branch tersebut?(edited)
+ZCZC 2021.09.12 >>>Selamat malam, kakak-kakak dan teman-teman. Saya izin bertanya mengenai GitHub repository. TXT/mylog.txt saya berukuran 1 KB dan index.html saya berukuran 2 KB, sedangkan ukuran repository saya adalah 1.03 MB, padahal jika digabungkan, seharusnya ukuran maksimal repository saya adalah 3 KB. Setelah saya telusuri, ternyata terdapat hidden file bernama ".git" yang berukuran lebih dari 1 MB yang terdapat di dalam repository saya. Pertanyaan saya adalah jika memungkinkan, bagaimana caranya saya menghilangkan folder ini dari repository saya? Jika tidak memungkinkan, bagaimana caranya saya mengurangi ukuran dari folder ini? Saya telah mencoba berbagai command seperti "git gc --aggressive" dan "git rm .git". Terima kasih atas waktunya 
+ZCZC 2021.09.12 >>>Malam kak, temen-temen, izin tanya, kalau misalnya github page build failed seperti ini kenapa ya?
+ZCZC 2021.09.13 >>>izin bertanya kak, jadi kemarin saya sempat lupa melakukan git pull sebelum push dan sekarang saya baru baca dari pertanyaan-pertanyaan sebelumnya kalau mungkin akan terjadi rebase secara otomatis, dan rebase bisa jadi tidak aman. saya tidak punya screenshot kejadiannya karena kemarin saya kira tidak ada masalah apa-apa, tapi setelah itu saya sempat push kembali. filenya (mylog.txt) berubah dan dan ketika saya cek history, ada commitnya. apakah di situ terjadi rebase secara otomatis juga? kira-kira apakah seperti itu aman? terima kasih sebelumnya.
+ZCZC 2021.09.13 >>>selamat pagi kak, izin bertanya, kemarin saya nyoba update mylog di debian dan push via ssh, tapi saya lupa belum pull, sekarang saya nyoba git pull keluar error ini kakk, kira-kira gimana ya kakk kalau seperti ini? terima kasih kaa
+ZCZC 2021.09.13 >>>saya sudah membuat suatu GPG key, tetapi saya mau ganti commentnya. Apakah bisa? Jika tidak, bagaimana cara delete key lama saya?
+ZCZC 2021.09.13 >>>Untuk quiz 2 tadi sepertinya tidak boleh diberikan penjelasan dan hanya boleh scriptnya saja. Jika sudah terlanjur bagaimana ya?
+ZCZC 2021.09.14 >>>Kak, pas saya masukkin gpg --full-generate-key katanya -bash: gpg: command not found. Kalo gitu perlu gmn ya kak? Makasih kak sebelumnya
+ZCZC 2021.09.14 >>>Izin bertanya Kak, untuk generate gpg ada "Real name" dan "Email" itu menggunakan sesuai siak atau sesuai akun github ya? Terimakasih
+ZCZC 2021.09.15 >>>kak saya ingin memasukan no passphrase tapi kok gk bisa. text box utk memasukan passphrase terus menerus muncul
+ZCZC 2021.09.15 >>>kak, email yang dipake untuk generate gpg itu make email github yang primary atau yang ada angkanya ya??
+ZCZC 2021.09.15 >>>sore kak, izin bertanya, ini pas generating a gnup key pair, berarti email addressnya isi username@localhost? atau gmn ya? makasihh
+ZCZC 2021.09.15 >>>Permisi, kalau gabisa connect ke putty gimana ya?
+ZCZC 2021.09.15 >>>malam kakak-kakak, izin bertanya kalau misal sudah terlanjut membuat GnuPG key dengan email [usernameGitHub]@localhost instead of email github kita, harus bagaimana ya? Apakah bisa diganti atau bikin key baru?
+ZCZC 2021.09.15 >>>malam kak maaf ganggu waktunya, aku mau nanyaa pas aku ngerjain bagian yang export your own key to file "mypupkey.txt" muncul .mylog.txt.swp, itu file apa ya kak?
+ZCZC 2021.09.16 >>>apakah 40 Hex Digit, long ID, short ID perlu dicatat (untuk digunakan di masa depan),  lalu untuk short ID bisa liat dimana ya, kok ngga ketemu?
+ZCZC 2021.09.16 >>>kak, untuk command ke-3, itu pake e-mail kita kan ya
+ZCZC 2021.09.16 >>>Selamat siang kak, saya sedang mengerjakan assignment week 2, tetapi saat saya melakukan commit ke github, saya mendapatkan pesan error seperti ini. Kira-kira apa yang harus saya lakukan ya, Kak? Terima kasih. 
+ZCZC 2021.09.16 >>>kak mau tanya, pas saya masukin wget -c https://osp4diss.vlsm.org/ETC/ospubkey.txt, hasilnya itu permission denied kak. itu kenapa yaa kak?
+ZCZC 2021.09.16 >>>izin bertanya, sebelum kita menjalankan perintah bash myscript.sh apakah kita mesti membuat file myscript.sh terlebih dahulu? soalnya direktorinya udah bener, dan saat dijalankan bash trs keluarnya "No such file or directory" makasih sebelumnyaaa
+ZCZC 2021.09.16 >>>Halo kak izin tanya, untuk rank link yang kita isi minggu ini .. itu masuknya di myrank.txt untuk W01 atau W02 ya kak? Makasih sebelumnya kak
+ZCZC 2021.09.16 >>>Halo kak izin tanya untuk signing public key emailnya sesuai dengan yang digambar ya kak? Bukan email kita?
+ZCZC 2021.09.16 >>>Halo kakk, saya izin bertanya. Tadi secara tidak sengaja saya memasukkan beberapa yang diperintahkan pada assignment week ini ke dalam directory pada foto di bawah. Apakah ada yang harus saya lakukan, seperti mengulang step2nya? Terimakasih kak
+ZCZC 2021.09.16 >>>Halo kak izin bertanya, waktu itu saya melihat github repo milik teman saya dan memencet "raw" karena ingin melihat sintaks dari files .md yang digunakan, tetapi saya tidak tau itu sama saja dengan fork, perlukah repo-repo ini saya hapus atau biarkan saja?
+ZCZC 2021.09.16 >>>Apakah nilai quiz bagian coding kemarin akan diumumkan di scele, Kak? Nilai saya belum keluar di scele Kak.
+ZCZC 2021.09.17 >>>week 02 ada 13 assignment kode buat lognya gimana?
+ZCZC 2021.09.17 >>>Untuk Assignment > 10 itu ditulisnya gimana ya di log? Terimakasih
+ZCZC 2021.09.17 >>>[Kak saya tidak bisa menjalankan myscript.sh. setelah saya "bash myscript.sh" output yang keluar adalah "bash: myscript.sh: No such file or directory". mohon bantuannya kak]
+ZCZC 2021.09.18 >>>kak, setelah saya export mypubkey, di github saya tidak ada file mypubkey.txt. Ini emang harus dibikin atau bagaimana ya? (awalnya saya pakai username@localhost untuk email, tapi diedit ke email github)
+ZCZC 2021.09.18 >>>kak izin tanya ini kenapa ya ? saya abis generate key mau push ke git dia ga nerima kalo cuman "git pull" atau "git push" aja, pas saya pake tambahan "--HEAD force" dari hasil gsgs, gabisa juga, maksudnya itu apa ya kak?
+ZCZC 2021.09.18 >>>halo mau nanya nih, kalau mau minta key utk nilai yang ada di tarball itu kontak lecturer langsung atau ke operatingsystems at vlsm dot org? soalnya para asdos bilang contact lecturer untuk key tapi di web os.vlsm.org untuk pertanyaan seputar grading kontak email operatingsystems, yang bener yg mana ya?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

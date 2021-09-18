@@ -1,0 +1,65 @@
+/** This is a report of recapped answers from Forumify Bot, OS211
+/** ZCZC DATE -QUESTION[COMMENT]- RESOULUTION CONTRIBUTORS
+ZCZC 2021-08-30 -permisi, kalo nama belum ada di report log pada website os bagaimana?-  TRUE MYM
+ZCZC 2021-08-30 -Selamat sore, izin bertanya. Untuk MacOS menambahkan .DS_Store itu gimana caranya ya kak? Terima kasih :slight_smile:- TRUE FXD
+ZCZC 2021-08-31 -Selamat malam kak, cara update log di github bagaimana ya? terima kasih- TRUE FXD FWS DAB
+ZCZC 2021-09-02 -Selamat siang Kakak-Kakak asisten, saya sudah membuat Log Github dari hari kemarin sebelum 2 september, namun mengapa tugas Log saya belum muncul?- TRUE FWS
+ZCZC 2021-09-02 -permisi, exams pada situs vlms itu hanya untuk latihan atau dipush juga ke repo?- TRUE DAB
+ZCZC 2021-09-02 -kak mau tanya, untuk tugas mingguin hrs push atau commit aja cukup ya? Soalnya udh masuk report di web jg- TRUE DAB
+ZCZC 2021-09-05 -Ka saya tidak sengaja membuat 2 branch, baiknya bagaimana ka? Apakah saya perlu hapus atau tidak?- TRUE DAB MYM
+ZCZC 2021-09-06 -bagaimana cara melihat host name dan port dari setting virtualbox? jika saya menggunakan setting yang tertera pada gambar, saya mendapatkan "PuTTY Fatal Error, Network error: Connection refused"- TRUE DAB
+ZCZC 2021-09-07 -ini ketiknya di mana ya? sudah saya coba di virtual box tapi keluar error connection refused [Tried to ssh from guest to guest iteslf]- TRUE FWS
+ZCZC 2021-09-08 -Kak, ini kenapa extraprompt: command not found ya?- TRUE MYM
+ZCZC 2021-09-08 -Kak izin tanya, kalau saat di startup keluar 2 message seperti ini, gapapa kah atau gimana solusinya ya kak?[They are scared at the login message]- TRUE DAB
+ZCZC 2021-09-08 -saat menginstal virtual box extension, saya mendapat error seperti ini[Unable to install extension pack]- TRUE FWS
+ZCZC 2021-09-08 -how do I know what is my virtual hostname?- TRUE FWS
+ZCZC 2021-09-08 -kak izin bertanya solusi, saya sudah set putty mengikuti perintah yang ada di web (hostname : localhost, port : 6022, name : OSP) tapi terus terjadi connection refused seperti ini. solusinya apa ya kak?- NO_CONFIRMATION FXD DAB
+ZCZC 2021-09-08 -yang bagian login ini caranya bagaimana ya? saya ngikutin petunjuknya di https://osp4diss.vlsm.org/osp-002-login.html masih belum paham- TRUE FWS MKA
+ZCZC 2021-09-08 -selamat siang. mohon maaf mengganggu, kak kenapa saya seperti ini ya kak?[VirtualBox Error, overwriting appliance]- TRUE FWS MYM FXD
+ZCZC 2021-09-08 -kak saya sudah coba syntax yang ada di panduan scp tapi mengapa error nya tetap sama cannot resolve host name. padahal nama guestnya sudah saya cek huruf per huruf- TRUE MYM
+ZCZC 2021-09-08 -kak mau nanya, untuk yang bikin file .bash_profile itu kita tinggal copy aja ya?- TRUE MKA
+ZCZC 2021-09-08 -kak, untuk yang bagian clone ini, cbkadal nya perlu diganti sama username github kita atau enggak usah ya?- TRUE MYM
+ZCZC 2021-09-08 -nama username debian bebas atau harus sesuai github ya?- TRUE FWS DAB
+ZCZC 2021-09-08 -kak kalau misalnya gak bisa import lagi karena trouble memori penuh, apakah boleh melanjutkan dari guest yang sebelumnya tanpa import dan export lagi?- NOT_RESPONDED NULL
+ZCZC 2021-09-08 -saat menginstal virtual box extension, saya mendapat error seperti ini [Error installing GRUB Extension Pack]- NO_CONFIRMATION FWS
+ZCZC 2021-09-08 -kak, kalo kayak gini harus ulang atau udah ya?[incomplete file]- TRUE FWS
+ZCZC 2021-09-09 -kak, izin tanya, saya masih ada masalah ssh, errornya connection refused. network vbox udah disetting, virtual guest udah nyala, sama udah buka di powershell juga. itu kenapa ya?[ssh again from putty to putty]- TRUE MYM
+ZCZC 2021-09-09 -Permisi kak mau tanya, pas masukkin command ini gabisa "ssh -p 6022 cbkadal@localhost", terus kak ini knp ya pas mau di reboot jd kyk gini trs abis itu puttynya inactive? thank you[surprised that vbox reboots]- TRUE FXD DAB
+ZCZC 2021-09-09 -halo kak mau nanya, ini bash_profile itu dapetnya darimana ya, punya saya sepertinya kosong- TRUE FWS
+ZCZC 2021-09-09 -kak izin tanya, kalau saat adding debian packages akhirnya gini kakk .. solusinyaa gimana ya kak? makasih sebelumnya kak- TRUE DAB MYM
+ZCZC 2021-09-09 -Kak, ini kan dibilang "Replace ‘cbkadal/Cicak Bin Kadal’ with your own name.", berarti itu yang diganti yang di user.email sama user.name kan ? Sama nama yang di maksud di user.name itu username atau nama lengkap ya?- TRUE FWS MYM
+ZCZC 2021-09-09 -kak, izin bertanya, kalau sudah terlanjur set jadi /lfs cara fix nya gimana ya? muncul error kya gini kak jadinya- TRUE NULL
+ZCZC 2021-09-09 -kak, saya tadi coba ngecommit mylog.txt dari debian, kok yang ngecommit malah cbkadal ya kak padahal udh ngikutin step + udah pake usernameku (file yang dicommit masih benar)- TRUE FXD
+ZCZC 2021-09-09 -kak, saya error pada bash_profile saat root, sedangkan ketika pada username biasa bisa jalan- NO_CONFIRMATION DAB
+ZCZC 2021-09-09 -Izin bertanya kak, ini kalo osnya ga support winscp berarti pake alternatif lain ya? kyk filezilla?- TRUE MYM
+ZCZC 2021-09-09 -Izin nanya dong, saya selalu error ketika import ova kenapa ya?[Overwrite]- TRUE FWS
+ZCZC 2021-09-09 -Kak kalau tidak keluar output apapun ketika source $HOME/.bash_profile setelah cat ke .bash_aliases gimana ya? Kan di contoh ada output- TRUE MYM
+ZCZC 2021-09-09 -kak, buat yg index.md sama links.md harus lewat vm/debian pake git atau boleh manual di website github? thankyou- TRUE MYM FXD
+ZCZC 2021-09-09 -Kak saya connection timed out waktu ssh -T git@github.com [connection]- TRUE FWS MYM
+ZCZC 2021-09-09 -kak, saya mau pindah ke username saya. tapi abis type password, ada error bash: EXIT: command not found. itu gimana ya kak- TRUE MYM DAB
+ZCZC 2021-09-09 -EXPORT your Virtual Guest to an OVA file. E.g. “Guest-01a.ova” (after shutdown). Estimated OVA size 355 MB. kalo aku 386mb aman kan kak?- TRUE MYM
+ZCZC 2021-09-09 -kak gansengaja ke clone punya cb kadal gimana ya kak- TRUE FWS DAB
+ZCZC 2021-09-10 -kak izin bertanya, mengapa pada saat commit tidak muncul message seperti yang ada pada contoh? apakah saya harus melakukan perubahan terlebih dahulu? terima kasih- TRUE FWS
+ZCZC 2021-09-10 -kak mau nanya kalo pas generating public/private rsa key pair, pas ngetik ls -al .ssh/ dibilangnya canot access '.ssh/' no such file or directory gimana ya kak?- TRUE FWS DEN MYM
+ZCZC 2021-09-10 -kak ingin bertanya terkadang web https://www.virtualbox.org/ memang tidak bisa dibuka ya?- TRUE FWS DAB
+ZCZC 2021-09-10 -Kak, cara lihat daftar username yg ada di virtual box kita gmn ya? Mau cek apakah hasil adding username berhasil, soalnya kemarin udh sempet ada tulisan usernameBaru@hostname, tapi waktu skrng mau login dgn yg baru, katanya gk exist..- TRUE MYM FWS
+ZCZC 2021-09-10 -kak, ini kenapa ya? Aku udah install git padahal- TRUE FWS DAB MYM
+ZCZC 2021-09-10 -kak boleh minta tutorial cara pake vscode remote explorernya ngga?- TRUE MYM
+ZCZC 2021-09-10 -Kak, untuk template buat mengcostumize page github dalam bentuk zip. dimana kita harus menaruh file zip tersebut ya di komputer kita?- TRUE MYM
+ZCZC 2021-09-10 -selamat siang kak, izin bertanya mengenai assignment week 1 , aku mengalami kendala seperti ini kak pada saat ingin menginstall package list 1, bagaimana ya kak- TRUE MYM
+ZCZC 2021-09-10 -Siang kak izin bertanya saat saya lakukan source $HOME/.bash_profile, terjadi file or directory not found kak- NO_CONFIRMATION NULL
+ZCZC 2021-09-10 -kak, pas create bash aliases, kan ada ggg='git pull; git add -A; git commit -m "OS212 cbkadal"; git push;'. cbkadal diganti pakai username kita atau tetap itu aja?- TRUE FWS DAB
+ZCZC 2021-09-10 -kak saya mau git pull habis ngedit mylog.txt dan buat page github tapi kok keluar error kek ini- TRUE FWS
+ZCZC 2021-09-10 -Sore kakak-kakak. Kak, izin bertanya. Kalau di virtualbox nya muncul ini terus ( saya udah coba 3 kali ). Saya harus apa ya kak?- NO_CONFIRMATION FWS
+ZCZC 2021-09-10 -kak mau tanya ini pas klik graphical muncul kaya gini harus diapakan ya kak?[vBOX Popup]- NO_CONFIRMATION FWS
+ZCZC 2021-09-10 -selamat sore kak, maaf ini harusnya true/false ya? makasih= NO_CONFIRMATION NULL
+ZCZC 2021-09-10 -kak izin tanya, kalo abis apt-get update ada permission denied gimana ya kak? Terima kasih sebelumnya- TRUE DAB
+ZCZC 2021-09-10 -Kak apakah boleh user.name saat git config adalah username github kita atau harus nama lengkap kita sesuai siak? Kalo harus nama lengkap, cara gantinya gimana ya kak? Td terlanjur pakai username github. Terima kasih sebelumnya- TRUE FWS
+ZCZC 2021-09-10 -Kak mohon nanya kalo git config pull.rebase harusnya true atau false ya kak ? karna di web os di set true tapi di bawahnya jadi false- TRUE DAB
+ZCZC 2021-09-10 -permisi kak, SCSI2 saya tidak ada pas mau set up partition, itu kenapa ya kak? terima kasih- TRUE FWS
+ZCZC 2021-09-10 -selamat malam kak. apakah boleh untuk langsung memasukan file-file dari template untuk github page langsung ke repo? atau apakah perlu clone terlebih dahulu ke local?- NO_CONFIRMATION MYM
+ZCZC 2021-09-10 -Kak izin bertanya, link yang dimasukkan dalam Page itu dikelompokkan per week atau tidak ya kak? kalo dikelompokkan, yang pertama kali kita tulis untuk week 0 atau langsung week 1 dulu ya kak? Terima kasih- TRUE MYM
+ZCZC 2021-09-10 -mengapa terjadi bad session key untuk dekripsi tarball?- NO_CONFIRMATION FWS
+ZCZC 2021-09-10 -[kak ini pas mau login ssh gabisa, kira kira kenapa ya kak? ]- NO_CONFIRMATION MYM
+ZCZC 2021-09-10 -halo kak, ini kenapa ya cmdnya ga mau ngikutin ssh- TRUE MYM
+ZCZC 2021-09-10 -ssh: connect to host localhost port 6022: Connection refused, ini kenapa ya?- TRUE NULL

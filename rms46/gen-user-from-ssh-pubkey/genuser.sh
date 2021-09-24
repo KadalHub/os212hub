@@ -1,6 +1,8 @@
 #!/bin/bash
 # (c) 2021-2021 This is a free script
 
+# REV04 rms46 Fri 24 Sep 2021 18:42:40 WIB
+#       Add NONO list
 # REV03 rms46 Fri 24 Sep 2021 14:22:34 WIB
 # REV02 dnswd September 12th 2021
 #       Remove custom skeleton and create user in one pass 
@@ -31,6 +33,10 @@ testAkun() {
    else false  ; fi
 }
 
+NONO="backup bin daemon games gnats irc list lp mail man messagebus news nobody "
+NONO="$NONO poor proxy root sshd sync sys systemd-coredump systemd-network"
+NONO="$NONO systemd-resolve systemd-timesync uucp www-data "
+
 for FILE in "$@"; do
     [ -f "$FILE" ] || continue;
     while read ll; do
@@ -38,6 +44,7 @@ for FILE in "$@"; do
         pkey1=$(echo "$ll" | awk '{print $2}')
         pkey2=$(echo "$ll" | awk '{print $3}')
         pkey3=$(echo "$ll" | awk '{print $4}')
+        echo $NONO | grep -q "$uname" && error "$uname is reserved"
         if   [[ "$pkey1" == "ssh-rsa" ]] ; then
             if ! testAkun $uname ; then
                 echo "Create $uname"

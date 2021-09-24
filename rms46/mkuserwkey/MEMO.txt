@@ -1,0 +1,4 @@
+https://stackoverflow.com/questions/20504662/how-to-get-home-directory-of-different-user-in-bash-script
+https://try2explore.com/questions/10069690
+https://plone.lucidsolutions.co.nz/linux/io/simple-bash-script-to-create-a-user-with-ssh-key
+

@@ -1,6 +1,9 @@
 #!/bin/bash
 # (c) 2021-2021 This is a free script
 
+# REV05 rms46 Fri 24 Sep 2021 21:59:43 WIB
+#       Fix empty line bug
+#       Add NONO list
 # REV04 rms46 Fri 24 Sep 2021 18:42:40 WIB
 #       Add NONO list
 # REV03 rms46 Fri 24 Sep 2021 14:22:34 WIB
@@ -36,11 +39,13 @@ testAkun() {
 NONO="backup bin daemon games gnats irc list lp mail man messagebus news nobody "
 NONO="$NONO poor proxy root sshd sync sys systemd-coredump systemd-network"
 NONO="$NONO systemd-resolve systemd-timesync uucp www-data "
+NONO="$NONO bind dnsmasq fetchmail postfix syslog tcpdump uuidd "
 
 for FILE in "$@"; do
     [ -f "$FILE" ] || continue;
     while read ll; do
         uname=$(echo "$ll" | awk '{print $1}')
+        [[ "$uname" == "" ]] && continue;
         pkey1=$(echo "$ll" | awk '{print $2}')
         pkey2=$(echo "$ll" | awk '{print $3}')
         pkey3=$(echo "$ll" | awk '{print $4}')

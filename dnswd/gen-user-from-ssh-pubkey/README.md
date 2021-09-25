@@ -6,6 +6,8 @@ The collection consist of 3 scripts:
 - `genuser.sh` -- Creates or delete user
 - `genbatch.sh` -- Does all the above directly 
 
+> `genuser.sh` and `genbatch.sh` must be run as root.
+
 ### Running examples  
 1. Reading files with `reader.sh` and feed the output into `genuser.sh` using pipe  
 

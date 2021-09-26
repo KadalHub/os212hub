@@ -23,7 +23,8 @@ for FILE in "$@"; do
             # Strip quotes in both username and sshkey
             uname=`echo "$uname" | cut -d'"' -f 2`
             pbkey=`echo "$pbkey" | cut -d'"' -f 2`
-            echo "$uname $pbkey"
+            [[ -z "$uname" ]] && continue
+	    echo "$uname $pbkey"
         done < <(
 	    # Split on commas and use 3rd and 4th column
             cut -d "," -f3,4 "$FILE" | 

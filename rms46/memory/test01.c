@@ -22,6 +22,7 @@ typedef char            Buf;
 typedef int*            IntPtr;
 typedef unsigned long   UL;
 typedef void*           AnyAddrPtr;
+typedef struct sysinfo  SYSINFO;
 
 #define GETDATE "date +%s"
 Buf    bufEpoch[BUFFERSIZE];
@@ -76,40 +77,37 @@ void printMyAddress (AnyAddrPtr address, String message) {
     printf("ZCZC ADDR %2.2d %#16.16lX %s\n", pcounter, address, message);
 }
 
-void myinfo(struct sysinfo* info) {
-    printf("ZCZC HOST %s\n",  getHostName());
-    printf("ZCZC USER %s\n",  getUserName());
-    printf("ZCZC RAM  %lu\n", info->totalram);
-    printf("ZCZC FREE %lu\n", info->freeram);
-    printf("ZCZC BUFR %lu\n", info->bufferram);
-    printf("ZCZC SWAP %lu\n", info->totalswap);
-    printf("ZCZC FSWP %lu\n", info->freeswap);
-}
-
-#define ArraySize   1024
+#define ArraySize   1024*1024
 int main(void) {
-    struct sysinfo* guestInfo;
-    IntPtr intArray=malloc((ArraySize+1) * sizeof(int));
+    SYSINFO guestInfo;
+    int     localdummy=0;
+    IntPtr  intArray=malloc((ArraySize+1) * sizeof(int));
 
     printf("%s\n", getStamp());
-    int     localdummy=0;
     for     (int ii=0; ii<ArraySize; ii++) *intArray=255;
-    sysinfo(guestInfo);
-    myinfo (guestInfo);
+    sysinfo(&guestInfo);
+    printf("ZCZC HOST   %s\n",       getHostName());
+    printf("ZCZC USER   %s\n",       getUserName());
+    printf("ZCZC RAM    %5lu MB\n",  guestInfo.totalram/1024/1024);
+    printf("ZCZC FREE   %5lu MB\n",  guestInfo.freeram/1024/1024);
+    printf("ZCZC BUFFER %5lu MB\n",  guestInfo.bufferram/1024/1024);
+    printf("ZCZC SWAP   %5lu MB\n",  guestInfo.totalswap/1024/1024);
+    printf("ZCZC FREESW %5lu MB\n",  guestInfo.freeswap/1024/1024);
+    printMyAddress(&intArray,      "&intArray");
     printMyAddress(&guestInfo,     "&guestInfo");
     printMyAddress(&localdummy,    "&localdummy");
     printMyAddress(&pcounter,      "&pcounter");
-    printMyAddress(bufEpoch,       "bufEpoch");
-    printMyAddress(bufHostName,    "bufHostName");
-    printMyAddress(bufSTAMP,       "bufSTAMP");
-    printMyAddress(getEpoch,       "getEpoch()");
-    printMyAddress(getHostName,    "getHostName()");
-    printMyAddress(getStamp,       "getStamp()");
-    printMyAddress(getUserName,    "getUserName()");
-    printMyAddress(main,           "main()");
-    printMyAddress(myinfo,         "myinfo()");
-    printMyAddress(printf,         "printf()");
-    printMyAddress(printMyAddress, "printMyAddress()");
+    printMyAddress( bufEpoch,       "bufEpoch");
+    printMyAddress( bufHostName,    "bufHostName");
+    printMyAddress( bufSTAMP,       "bufSTAMP");
+    printMyAddress( intArray,       "intArray");
+    printMyAddress( getEpoch,       "getEpoch()");
+    printMyAddress( getHostName,    "getHostName()");
+    printMyAddress( getStamp,       "getStamp()");
+    printMyAddress( getUserName,    "getUserName()");
+    printMyAddress( main,           "main()");
+    printMyAddress( printf,         "printf()");
+    printMyAddress( printMyAddress, "printMyAddress()");
     sleep(1);
     printf("%s\n", getStamp());
 }

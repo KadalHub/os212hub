@@ -1,5 +1,5 @@
-# REV00 Sat 03 Apr 2021 06:00:09 WIB
-# START Sat 03 Apr 2021 05:59:53 WIB
+# REV01 Sat 03 Apr 2021 11:00:00 WIB
+# START Sat 03 Apr 2021 06:00:00 WIB
 
 # INFO: With this "Makefile", just run:
 # INFO:                     make
@@ -17,7 +17,7 @@ OBJ           = $(SRCS:.c=.o)
 DEP           = $(OBJ:.o=.d)
 PROGS         = $(SRCS:.c=  )
 
-P00=test01
+P00=mymemory
 
 EXECS= \
    $(P00) \

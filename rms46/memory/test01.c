@@ -14,29 +14,29 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+#include <sys/sysinfo.h>
 
-#define BUFFERSIZE 256
-typedef struct     sysinfo* SYSINFO;
-typedef char*      String;
-typedef char       Chr;
-typedef unsigned   long UL;
-typedef void*      AnyAddrPtr;
+#define BUFFERSIZE      256
+typedef struct sysinfo* SYSINFO;
+typedef char*           String;
+typedef char            Buf;
+typedef unsigned long   UL;
+typedef void*           AnyAddrPtr;
 
-
-#define GETDATE    "date +%s"
-Chr gEpoch[BUFFERSIZE];
+#define GETDATE "date +%s"
+Buf    bufEpoch[BUFFERSIZE];
 String getEpoch(void) {
     FILE* filePtr = popen(GETDATE, "r");
-    UL    tmpLong = atol(fgets(gEpoch, BUFFERSIZE, filePtr));
+    UL    tmpLong = atol(fgets(bufEpoch, BUFFERSIZE, filePtr));
     pclose (filePtr);
-    sprintf(gEpoch, "%16.16lX", tmpLong);
-    return (gEpoch+8);
+    sprintf(bufEpoch, "%16.16lX", tmpLong);
+    return (bufEpoch+8);
 }
 
-Chr gHostName[BUFFERSIZE];
+Buf    bufHostName[BUFFERSIZE];
 String getHostName(void) {
-    if (gethostname(gHostName,BUFFERSIZE)) strcpy(gHostName,"HostNameError");
-    return gHostName;
+    if (gethostname(bufHostName,BUFFERSIZE)) strcpy(bufHostName,"HostNameError");
+    return bufHostName;
 }
 
 String getUserName(void) {
@@ -47,49 +47,63 @@ String getUserName(void) {
 
 #define DOSHASUM   "echo %s|sha1sum|tr '[a-z]' '[A-Z]'| cut -c1-8"
 #define RESULT     8
-Chr gSTAMP[BUFFERSIZE];
-String setStamp(void) {
-    Chr    tmpSTR[BUFFERSIZE];
+Buf    bufSTAMP[BUFFERSIZE];
+String getStamp(void) {
+    Buf    tmpSTR[BUFFERSIZE];
     strcpy(tmpSTR,"XXXXXXXX");
     String tmpEpoch=getEpoch();
     if (!strcmp(getHostName(), getUserName())) {
         strcpy(tmpSTR,getUserName());
         strcat(tmpSTR,tmpEpoch);
-        Chr  tmpCMD[BUFFERSIZE];
+        Buf  tmpCMD[BUFFERSIZE];
         sprintf(tmpCMD, DOSHASUM, tmpSTR);
         FILE* filePtr = popen(tmpCMD, "r");
         fgets(tmpSTR, RESULT+1, filePtr);
         tmpSTR[RESULT]=0;
         pclose(filePtr);
     }
-    gSTAMP[0]=0;
-    strcpy(gSTAMP,"ZCZC STAMP ");
-    strcat(gSTAMP,tmpEpoch);
-    strcat(gSTAMP," ");
-    strcat(gSTAMP,tmpSTR);
-    strcat(gSTAMP," ");
-    return gSTAMP;
+    bufSTAMP[0]=0;
+    strcpy(bufSTAMP,"ZCZC STAMP ");
+    strcat(bufSTAMP,tmpEpoch);
+    strcat(bufSTAMP," ");
+    strcat(bufSTAMP,tmpSTR);
+    strcat(bufSTAMP," ");
+    return bufSTAMP;
 }
 
 int pcounter=1;
 void printMyAddress (AnyAddrPtr address, String message) {
-    printf("ZCZC ADDR %2.2d %#16.16X %s\n", pcounter, address, message);
+    printf("ZCZC ADDR %2.2d %#16.16lX %s\n", pcounter, address, message);
+}
+
+void myinfo(SYSINFO info) {
+    printf("ZCZC HOST %s\n",  getHostName());
+    printf("ZCZC USER %s\n",  getUserName());
+    printf("ZCZC RAM  %lu MB\n", (info->totalram/1024/1024));
+    printf("ZCZC FREE %lu MB\n", (info->freeram/1024/1024));
 }
 
 int main(void) {
-    printf("%s\n", setStamp());
+    int  localdummy=0;
+    printf("%s\n", getStamp());
+    SYSINFO guestInfo;
+    sysinfo(guestInfo);
+    myinfo(guestInfo);
+    printMyAddress(&guestInfo,     "&guestInfo");
+    printMyAddress(&localdummy,    "&localdummy");
     printMyAddress(&pcounter,      "&pcounter");
-    printMyAddress(main,           "main()");
+    printMyAddress(bufEpoch,       "bufEpoch");
+    printMyAddress(bufHostName,    "bufHostName");
+    printMyAddress(bufSTAMP,       "bufSTAMP");
     printMyAddress(getEpoch,       "getEpoch()");
     printMyAddress(getHostName,    "getHostName()");
+    printMyAddress(getStamp,       "getStamp()");
     printMyAddress(getUserName,    "getUserName()");
-    printMyAddress(setStamp,       "setStamp()");
-    printMyAddress(printf,         "printf");
-    printMyAddress(printMyAddress, "printMyAddress");
-    printMyAddress(gSTAMP,         "gSTAMP");
-    printMyAddress(gEpoch,         "gEpoch");
-    printMyAddress(gHostName,      "gHostName");
+    printMyAddress(main,           "main()");
+    printMyAddress(myinfo,         "myinfo()");
+    printMyAddress(printf,         "printf()");
+    printMyAddress(printMyAddress, "printMyAddress()");
     sleep(1);
-    printf("%s\n", setStamp());
+    printf("%s\n", getStamp());
 }
 

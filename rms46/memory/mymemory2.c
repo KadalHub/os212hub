@@ -5,7 +5,6 @@
  * hope that it will be useful, but WITHOUT ANY WARRANTY; without even the 
  * implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 # INFO: MYADDDRESSES
- * REV05: Sun 03 Oct 2021 20:20:00 WIB
  * REV04: Sun 03 Oct 2021 18:20:00 WIB
  * REV03: Sun 03 Oct 2021 16:10:00 WIB
  * REV02: Sun 03 Oct 2021 04:22:00 WIB
@@ -79,7 +78,7 @@ String getStamp(void) {
 
 int pcounter=1;
 void printMyAddress (AnyAddrPtr address, String message) {
-    printf("ZCZC ADDR %2.2d %#16.16lX %s\n", pcounter++, (UL) address, message);
+    printf("ZCZC ADDR %2.2d %#16.16lX %s\n", pcounter, (UL) address, message);
 }
 
 #define ArraySize   1024*1024
@@ -98,31 +97,31 @@ int main(void) {
     printf("ZCZC BUFFER %5lu MB\n",  guestInfo.bufferram/1024/1024);
     printf("ZCZC SWAP   %5lu MB\n",  guestInfo.totalswap/1024/1024);
     printf("ZCZC FREESW %5lu MB\n",  guestInfo.freeswap/1024/1024);
-    printMyAddress( getEpoch,       " getEpoch()");
-    printMyAddress( getHost,        " getHost()");
-    printMyAddress( getUserName,    " getUserName()");
-    printMyAddress( getStamp,       " getStamp()");
-    printMyAddress( printMyAddress, " printMyAddress()");
-    printMyAddress( main,           " main()");
-    printMyAddress(&pcounter,       "&pcounter");
-    printMyAddress( bufEpoch,       " bufEpoch");
-    printMyAddress( bufHostName,    " bufHostName");
-    printMyAddress( bufSTAMP,       " bufSTAMP");
-    printMyAddress( intArray,       " intArray");
-    printMyAddress( atol,           " atol()");
-    printMyAddress( printf,         " printf()");
-    printMyAddress( sprintf,        " sprintf()");
-    printMyAddress( fgets,          " fgets()");
-    printMyAddress( popen,          " popen()");
-    printMyAddress( pclose,         " pclose()");
-    printMyAddress( gethostname,    " gethostname()");
-    printMyAddress( getlogin,       " getlogin()");
-    printMyAddress( strcmp,         " strcmp()");
-    printMyAddress( strcat,         " strcat()");
-    printMyAddress( strcpy,         " strcpy()");
-    printMyAddress(&intArray,       "&intArray");
-    printMyAddress(&localdummy,     "&localdummy");
-    printMyAddress(&guestInfo,      "&guestInfo");
+    printMyAddress(&guestInfo,     "&guestInfo");
+    printMyAddress(&intArray,      "&intArray");
+    printMyAddress(&localdummy,    "&localdummy");
+    printMyAddress(&pcounter,      "&pcounter");
+    printMyAddress( atol,           "atol()");
+    printMyAddress( bufEpoch,       "bufEpoch");
+    printMyAddress( bufHostName,    "bufHostName");
+    printMyAddress( bufSTAMP,       "bufSTAMP");
+    printMyAddress( intArray,       "intArray");
+    printMyAddress( fgets,          "fgets()");
+    printMyAddress( getEpoch,       "getEpoch()");
+    printMyAddress( getHost,        "getHost()");
+    printMyAddress( gethostname,    "gethostname()");
+    printMyAddress( getlogin,       "getlogin()");
+    printMyAddress( getStamp,       "getStamp()");
+    printMyAddress( getUserName,    "getUserName()");
+    printMyAddress( main,           "main()");
+    printMyAddress( pclose,         "pclose()");
+    printMyAddress( popen,          "popen()");
+    printMyAddress( printf,         "printf()");
+    printMyAddress( printMyAddress, "printMyAddress()");
+    printMyAddress( sprintf,        "sprintf()");
+    printMyAddress( strcat,         "strcat()");
+    printMyAddress( strcmp,         "strcmp()");
+    printMyAddress( strcpy,         "strcpy()");
     sleep(1);
     printf("%s\n", getStamp());
 }

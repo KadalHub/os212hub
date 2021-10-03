@@ -12,21 +12,84 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
 
-typedef struct sysinfo* SYSINFO;
-typedef void* AnyAddrPtr;
-typedef char* ChrPtr;
-typedef char  Chr;
+#define BUFFERSIZE 256
+typedef struct     sysinfo* SYSINFO;
+typedef char*      String;
+typedef char       Chr;
+typedef unsigned   long UL;
+typedef void*      AnyAddrPtr;
+
+
+#define GETDATE    "date +%s"
+Chr gEpoch[BUFFERSIZE];
+String getEpoch(void) {
+    FILE* filePtr = popen(GETDATE, "r");
+    UL    tmpLong = atol(fgets(gEpoch, BUFFERSIZE, filePtr));
+    pclose (filePtr);
+    sprintf(gEpoch, "%16.16lX", tmpLong);
+    return (gEpoch+8);
+}
+
+Chr gHostName[BUFFERSIZE];
+String getHostName(void) {
+    if (gethostname(gHostName,BUFFERSIZE)) strcpy(gHostName,"HostNameError");
+    return gHostName;
+}
+
+String getUserName(void) {
+    String userStr=getlogin();
+    if   (userStr==NULL) userStr="UserNameError";
+    return userStr;
+}
+
+#define DOSHASUM   "echo %s|sha1sum|tr '[a-z]' '[A-Z]'| cut -c1-8"
+#define RESULT     8
+Chr gChkSum[BUFFERSIZE];
+String setStamp(void) {
+    Chr    tmpSTR[BUFFERSIZE];
+    strcpy(tmpSTR,"XXXXXXXX");
+    String tmpEpoch=getEpoch();
+    if (!strcmp(getHostName(), getUserName())) {
+        strcpy(tmpSTR,getUserName());
+        strcat(tmpSTR,tmpEpoch);
+        Chr  tmpCMD[BUFFERSIZE];
+        sprintf(tmpCMD, DOSHASUM, tmpSTR);
+        FILE* filePtr = popen(tmpCMD, "r");
+        fgets(tmpSTR, RESULT+1, filePtr);
+        tmpSTR[RESULT]=0;
+        pclose(filePtr);
+    }
+    gChkSum[0]=0;
+    strcpy(gChkSum,"ZCZC CHKSUM ");
+    strcat(gChkSum,tmpEpoch);
+    strcat(gChkSum," ");
+    strcat(gChkSum,tmpSTR);
+    strcat(gChkSum," ");
+    return gChkSum;
+}
 
 int pcounter=1;
-void printMyAddress (AnyAddrPtr address, ChrPtr message) {
+void printMyAddress (AnyAddrPtr address, String message) {
     printf("ZCZC ADDR %2.2d %#16.16X %s\n", pcounter, address, message);
 }
 
 int main(void) {
-    printMyAddress(&main,           "&main");
-    printMyAddress(&printf,         "&printf");
-    printMyAddress(&printMyAddress, "&printMyAddress");
-    printMyAddress(&pcounter,       "&pcounter");
+    printf("%s\n", setStamp());
+    printMyAddress(&pcounter,      "&pcounter");
+    printMyAddress(main,           "main()");
+    printMyAddress(getEpoch,       "getEpoch()");
+    printMyAddress(getHostName,    "getHostName()");
+    printMyAddress(getUserName,    "getUserName()");
+    printMyAddress(setStamp,       "setStamp()");
+    printMyAddress(printf,         "printf");
+    printMyAddress(printMyAddress, "printMyAddress");
+    printMyAddress(gChkSum,        "gChkSum");
+    printMyAddress(gEpoch,         "gEpoch");
+    printMyAddress(gHostName,      "gHostName");
+    sleep(1);
+    printf("%s\n", setStamp());
 }
 

@@ -5,10 +5,11 @@
  * hope that it will be useful, but WITHOUT ANY WARRANTY; without even the 
  * implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 # INFO: MYADDDRESSES
- * REV03: Sun 03 Oct 2021 16:10:11 WIB
- * REV02: Sun 03 Oct 2021 04:22:27 WIB
- * REV01: Sat 02 Oct 2021 18:26:34 WIB
- * START: Sat 03 Apr 2021 06:20:43 WIB
+ * REV04: Sun 03 Oct 2021 18:20:00 WIB
+ * REV03: Sun 03 Oct 2021 16:10:00 WIB
+ * REV02: Sun 03 Oct 2021 04:22:00 WIB
+ * REV01: Sat 02 Oct 2021 18:26:00 WIB
+ * START: Sat 03 Apr 2021 06:20:00 WIB
  */
 
 #include <stdio.h>
@@ -17,7 +18,9 @@
 #include <unistd.h>
 #include <sys/sysinfo.h>
 
-#define BUFFERSIZE      256
+#define BUFSIZE1        128
+#define BUFSIZE2        256
+#define BUFSIZE3        1024
 typedef char*           String;
 typedef char            Buf;
 typedef int*            IntPtr;
@@ -26,18 +29,18 @@ typedef void*           AnyAddrPtr;
 typedef struct sysinfo  SYSINFO;
 
 #define GETDATE "date +%s"
-Buf    bufEpoch[BUFFERSIZE];
+Buf    bufEpoch[BUFSIZE1];
 String getEpoch(void) {
     FILE* filePtr = popen(GETDATE, "r");
-    UL    tmpLong = atol(fgets(bufEpoch, BUFFERSIZE, filePtr));
+    UL    tmpLong = atol(fgets(bufEpoch, BUFSIZE1, filePtr));
     pclose (filePtr);
     sprintf(bufEpoch, "%16.16lX", tmpLong);
     return (bufEpoch+8);
 }
 
-Buf    bufHostName[BUFFERSIZE];
+Buf    bufHostName[BUFSIZE1];
 String getHost(void) {
-    if (gethostname(bufHostName,BUFFERSIZE)) strcpy(bufHostName,"HostNameError");
+    if (gethostname(bufHostName,BUFSIZE1)) strcpy(bufHostName,"HostNameError");
     return bufHostName;
 }
 
@@ -49,15 +52,15 @@ String getUserName(void) {
 
 #define DOSHASUM   "echo %s|sha1sum|tr '[a-z]' '[A-Z]'| cut -c1-8"
 #define RESULT     8
-Buf    bufSTAMP[BUFFERSIZE];
+Buf    bufSTAMP[BUFSIZE3];
 String getStamp(void) {
-    Buf    tmpSTR[BUFFERSIZE];
+    Buf    tmpSTR[BUFSIZE1];
     strcpy(tmpSTR,"XXXXXXXX");
     String tmpEpoch=getEpoch();
     if (!strcmp(getHost(), getUserName())) {
         strcpy(tmpSTR,getUserName());
         strcat(tmpSTR,tmpEpoch);
-        Buf  tmpCMD[BUFFERSIZE];
+        Buf  tmpCMD[BUFSIZE2];
         sprintf(tmpCMD, DOSHASUM, tmpSTR);
         FILE* filePtr = popen(tmpCMD, "r");
         fgets(tmpSTR, RESULT+1, filePtr);
@@ -75,7 +78,7 @@ String getStamp(void) {
 
 int pcounter=1;
 void printMyAddress (AnyAddrPtr address, String message) {
-    printf("ZCZC ADDR %2.2d %#16.16lX %s\n", pcounter, address, message);
+    printf("ZCZC ADDR %2.2d %#16.16lX %s\n", pcounter, (UL) address, message);
 }
 
 #define ArraySize   1024*1024

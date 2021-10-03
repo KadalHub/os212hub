@@ -1,3 +1,4 @@
+# REV02 Sun 03 Oct 2021 16:06:39 WIB
 # REV01 Sat 03 Apr 2021 11:00:00 WIB
 # START Sat 03 Apr 2021 06:00:00 WIB
 
@@ -17,10 +18,12 @@ OBJ           = $(SRCS:.c=.o)
 DEP           = $(OBJ:.o=.d)
 PROGS         = $(SRCS:.c=  )
 
-P00=mymemory
+P00=mymemory1
+P01=mymemory2
 
 EXECS= \
    $(P00) \
+   $(P01) \
 
 
 all:  $(EXECS)

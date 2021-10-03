@@ -5,6 +5,7 @@
  * hope that it will be useful, but WITHOUT ANY WARRANTY; without even the 
  * implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 # INFO: MYADDDRESSES
+ * REV05: Sun 03 Oct 2021 20:20:00 WIB
  * REV04: Sun 03 Oct 2021 18:20:00 WIB
  * REV03: Sun 03 Oct 2021 16:10:00 WIB
  * REV02: Sun 03 Oct 2021 04:22:00 WIB
@@ -78,7 +79,7 @@ String getStamp(void) {
 
 int pcounter=1;
 void printMyAddress (AnyAddrPtr address, String message) {
-    printf("ZCZC ADDR %2.2d %#16.16lX %s\n", pcounter, (UL) address, message);
+    printf("ZCZC ADDR %2.2d %#16.16lX %s\n", pcounter++, (UL) address, message);
 }
 
 #define ArraySize   1024*1024

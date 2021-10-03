@@ -17,9 +17,9 @@
 #include <sys/sysinfo.h>
 
 #define BUFFERSIZE      256
-typedef struct sysinfo* SYSINFO;
 typedef char*           String;
 typedef char            Buf;
+typedef int*            IntPtr;
 typedef unsigned long   UL;
 typedef void*           AnyAddrPtr;
 
@@ -76,19 +76,26 @@ void printMyAddress (AnyAddrPtr address, String message) {
     printf("ZCZC ADDR %2.2d %#16.16lX %s\n", pcounter, address, message);
 }
 
-void myinfo(SYSINFO info) {
+void myinfo(struct sysinfo* info) {
     printf("ZCZC HOST %s\n",  getHostName());
     printf("ZCZC USER %s\n",  getUserName());
-    printf("ZCZC RAM  %lu MB\n", (info->totalram/1024/1024));
-    printf("ZCZC FREE %lu MB\n", (info->freeram/1024/1024));
+    printf("ZCZC RAM  %lu\n", info->totalram);
+    printf("ZCZC FREE %lu\n", info->freeram);
+    printf("ZCZC BUFR %lu\n", info->bufferram);
+    printf("ZCZC SWAP %lu\n", info->totalswap);
+    printf("ZCZC FSWP %lu\n", info->freeswap);
 }
 
+#define ArraySize   1024
 int main(void) {
-    int  localdummy=0;
+    struct sysinfo* guestInfo;
+    IntPtr intArray=malloc((ArraySize+1) * sizeof(int));
+
     printf("%s\n", getStamp());
-    SYSINFO guestInfo;
+    int     localdummy=0;
+    for     (int ii=0; ii<ArraySize; ii++) *intArray=255;
     sysinfo(guestInfo);
-    myinfo(guestInfo);
+    myinfo (guestInfo);
     printMyAddress(&guestInfo,     "&guestInfo");
     printMyAddress(&localdummy,    "&localdummy");
     printMyAddress(&pcounter,      "&pcounter");

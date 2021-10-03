@@ -106,8 +106,18 @@ int main(void) {
     printMyAddress( getStamp,       "getStamp()");
     printMyAddress( getUserName,    "getUserName()");
     printMyAddress( main,           "main()");
+    printMyAddress( atol,           "atol()");
     printMyAddress( printf,         "printf()");
+    printMyAddress( sprintf,        "sprintf()");
+    printMyAddress( pclose,         "pclose()");
+    printMyAddress( popen,          "popen()");
     printMyAddress( printMyAddress, "printMyAddress()");
+    printMyAddress( gethostname,    "gethostname()");
+    printMyAddress( strcpy,         "strcpy()");
+    printMyAddress( strcmp,         "strcmp()");
+    printMyAddress( strcat,         "strcat()");
+    printMyAddress( getlogin,       "getlogin()");
+    printMyAddress( fgets,          "fgets()");
     sleep(1);
     printf("%s\n", getStamp());
 }

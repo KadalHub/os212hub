@@ -47,7 +47,7 @@ String getUserName(void) {
 
 #define DOSHASUM   "echo %s|sha1sum|tr '[a-z]' '[A-Z]'| cut -c1-8"
 #define RESULT     8
-Chr gChkSum[BUFFERSIZE];
+Chr gSTAMP[BUFFERSIZE];
 String setStamp(void) {
     Chr    tmpSTR[BUFFERSIZE];
     strcpy(tmpSTR,"XXXXXXXX");
@@ -62,13 +62,13 @@ String setStamp(void) {
         tmpSTR[RESULT]=0;
         pclose(filePtr);
     }
-    gChkSum[0]=0;
-    strcpy(gChkSum,"ZCZC CHKSUM ");
-    strcat(gChkSum,tmpEpoch);
-    strcat(gChkSum," ");
-    strcat(gChkSum,tmpSTR);
-    strcat(gChkSum," ");
-    return gChkSum;
+    gSTAMP[0]=0;
+    strcpy(gSTAMP,"ZCZC STAMP ");
+    strcat(gSTAMP,tmpEpoch);
+    strcat(gSTAMP," ");
+    strcat(gSTAMP,tmpSTR);
+    strcat(gSTAMP," ");
+    return gSTAMP;
 }
 
 int pcounter=1;
@@ -86,7 +86,7 @@ int main(void) {
     printMyAddress(setStamp,       "setStamp()");
     printMyAddress(printf,         "printf");
     printMyAddress(printMyAddress, "printMyAddress");
-    printMyAddress(gChkSum,        "gChkSum");
+    printMyAddress(gSTAMP,         "gSTAMP");
     printMyAddress(gEpoch,         "gEpoch");
     printMyAddress(gHostName,      "gHostName");
     sleep(1);

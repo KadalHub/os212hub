@@ -5,6 +5,7 @@
  * hope that it will be useful, but WITHOUT ANY WARRANTY; without even the 
  * implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 # INFO: MYADDDRESSES
+ * REV05: Mon 04 Oct 2021 16:58:33 WIB
  * REV04: Sun 03 Oct 2021 18:20:00 WIB
  * REV03: Sun 03 Oct 2021 16:10:00 WIB
  * REV02: Sun 03 Oct 2021 04:22:00 WIB
@@ -114,6 +115,7 @@ int main(void) {
     printMyAddress( getStamp,       "getStamp()");
     printMyAddress( getUserName,    "getUserName()");
     printMyAddress( main,           "main()");
+    printMyAddress( malloc,         "malloc()");
     printMyAddress( pclose,         "pclose()");
     printMyAddress( popen,          "popen()");
     printMyAddress( printf,         "printf()");
@@ -122,6 +124,7 @@ int main(void) {
     printMyAddress( strcat,         "strcat()");
     printMyAddress( strcmp,         "strcmp()");
     printMyAddress( strcpy,         "strcpy()");
+    printMyAddress( sysinfo,        "sysinfo()");
     sleep(1);
     printf("%s\n", getStamp());
 }

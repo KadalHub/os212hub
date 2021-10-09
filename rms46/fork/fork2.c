@@ -9,10 +9,13 @@
  * START: Sat 03 Apr 2021 06:20:00 WIB
  */
 
+#include <fcntl.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+#include <sys/mman.h>
+#include <sys/stat.h>
 #include <sys/sysinfo.h>
 #include <sys/types.h>
 #include <sys/wait.h>
@@ -79,9 +82,10 @@ void printMyAddress (AnyAddrPtr address, String message) {
     printf("ZCZC ADDR %2.2d %#16.16lX %s\n", pcounter, (UL) address, message);
 }
 
-void report() {
+void report(IntPtr share) {
     sleep(1);
-    printf("ZCZC PID %5ld", getpid());
+    printf("ZCZC NO %2d",   (*share)++);
+    printf(" PID %5ld",     getpid());
     printf(" PPID %5ld",    getppid());
     printf(" HOST %s",      getHost());
     printf(" STAMP %s\n",   getStamp());
@@ -89,12 +93,23 @@ void report() {
     fflush(NULL);
 }
 
-#define ArraySize   1024*1024
+#define CHMOD          0666
+#define MYFLAGS        O_CREAT|O_RDWR
+#define MYPROTECTION   PROT_READ|PROT_WRITE
+#define MYVISIBILITY   MAP_SHARED
+#define SHAREFILE      "WEEK06-SHARE.bin"
+
 int main(void) {
+    int       fd  = open(SHAREFILE, MYFLAGS, CHMOD);
+    fchmod   (fd, CHMOD);
+    ftruncate(fd, sizeof(int));
+    IntPtr sharePtr = mmap(NULL, sizeof(int), MYPROTECTION, MYVISIBILITY, fd, 0);
+    close(fd);
+    *sharePtr=1;
     fork();
     fork();
     fork();
-    report();
-    report();
+    report(sharePtr);
+    report(sharePtr);
 }
 

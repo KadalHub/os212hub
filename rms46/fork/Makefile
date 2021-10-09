@@ -33,6 +33,7 @@ $(EXECS): %: %.c $(DEPS)
 clean:
 	rm -f ${EXECS} 
 	rm -f *.map
+	rm -f WEEK06-SHARE.bin
  
 .phony: clean all
 

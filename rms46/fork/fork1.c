@@ -4,7 +4,8 @@
  * This program is free script/software. This program is distributed in the 
  * hope that it will be useful, but WITHOUT ANY WARRANTY; without even the 
  * implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-# INFO: FORK
+# INFO: FORK1
+ * REV02: Sun 10 Oct 2021 01:11:27 WIB
  * REV01: Sat 09 Oct 2021 20:28:04 WIB
  * START: Sat 03 Apr 2021 06:20:00 WIB
  */
@@ -103,7 +104,7 @@ int main(void) {
     int       fd  = open(SHAREFILE, MYFLAGS, CHMOD);
     fchmod   (fd, CHMOD);
     ftruncate(fd, sizeof(int));
-    IntPtr sharePtr = mmap(NULL, sizeof(int), MYPROTECTION, MYVISIBILITY, fd, 0);
+    IntPtr sharePtr = malloc(sizeof(int));
     close(fd);
     *sharePtr=1;
     fork();
